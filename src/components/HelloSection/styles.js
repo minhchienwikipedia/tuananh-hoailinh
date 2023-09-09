@@ -30,7 +30,17 @@ export const styWrapper = css`
     }
   }
 
-  img {
+  .qrcode {
     max-width: 120px;
+  }
+
+  .info {
+    line-height: 18px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+
+  .highlight {
+    font-weight: 600;
   }
 `;

@@ -7,13 +7,13 @@ function PhotoSection() {
   const renderYoutubeVideo = () => {
     return (
       <iframe
-        title="Pre-Wedding Tuấn Anh & Hoài Linh"
-        width="100%"
-        height="360px"
-        src="https://www.youtube.com/embed/75w39OY7N-k"
-        frameBorder="0"
-        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-        allowFullScreen
+        width="360"
+        height="640"
+        src="https://www.youtube.com/embed/OCFFIzAv1ko"
+        title="TA &amp; HL"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
       ></iframe>
     );
   };
@@ -27,9 +27,9 @@ function PhotoSection() {
               <h2 className="main-font">Ảnh của chúng mình</h2>
             </div>
           </div>
-          <div className="row">
-            <div className="col-md-10 col-md-offset-1">{renderYoutubeVideo()}</div>
-          </div>
+
+          <div className="col-md-8 col-md-offset-2 text-center fh5co-heading">{renderYoutubeVideo()}</div>
+
           <div className="row">
             <div className="col-md-10 col-md-offset-1">
               <ImageGallery items={photos} showBullets={false} />;

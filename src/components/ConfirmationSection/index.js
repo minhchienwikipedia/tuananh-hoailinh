@@ -13,24 +13,72 @@ function ConfirmationSection({ guestName }) {
     NO: 'Kh%C3%B4ng',
   };
   const submit = () => {
-    const url = `https://docs.google.com/forms/d/e/1FAIpQLSd4aqMx-oFgbYS52NxU6L5dV_0z0N-uCoSaIab3wcNH7PnAfg/formResponse?&submit=Submit?usp=pp_url&entry.2092238618=${selected}&entry.1715010233=${guestName}&entry.1388511632=${wishes}`;
+    if (!selected) {
+      alert('Bạn lựa chọn!');
+      return;
+    }
+    let url = `https://docs.google.com/forms/d/e/1FAIpQLSd4aqMx-oFgbYS52NxU6L5dV_0z0N-uCoSaIab3wcNH7PnAfg/formResponse?&submit=Submit?usp=pp_url&entry.2092238618=${selected}&entry.1715010233=${guestName}`;
+    if (wishes) {
+      url += `&entry.1388511632=${wishes}`;
+    }
+    fetch(url, { method: 'POST' })
+      .then((res) => {
+        if (res.status === 200) {
+          alert('Gửi thành công!');
+        }
+      })
+      .catch((error) => {
+        console.log(`[1;34m ~ file: index.js:31 ~ submit ~ error:`, error);
+        alert('Gửi thất bại');
+      });
+  };
+
+  const onSelect = (value) => () => {
+    setSelected(value);
   };
 
   return (
-    <div id="fh5co-started" css={styWrapper}>
+    <div id="fh5co-started" className="fh5co-section-gray" css={styWrapper}>
       <div className="overlay"></div>
       <div className="container">
         <div className="row">
           <div className="col-md-8 col-md-offset-2 text-center fh5co-heading">
             <p className="sub-title sub-title__wedding">Để chúng mình chuẩn bị chu đáo nhất</p>
             <h2 className="main-font">{`Bạn vui lòng xác nhận tham dự`}</h2>
-            <input type="radio" id="html" name="fav_language" value="HTML" />
+            <div onClick={onSelect(options.YES)}>
+              <input
+                style={{ marginRight: 8, marginTop: 16 }}
+                type="radio"
+                id="ok"
+                name="drone"
+                value={options.YES}
+                checked={selected === options.YES}
+              />
+              <label style={{ fontSize: 18, fontWeight: 'normal' }} for="ok">
+                {' '}
+                Mình chắc chắn sẽ tham dự
+              </label>
+            </div>
+            <div onClick={onSelect(options.NO)}>
+              <input
+                style={{ marginRight: 8 }}
+                type="radio"
+                id="no"
+                name="drone"
+                value={options.NO}
+                checked={selected === options.NO}
+              />
+              <label style={{ fontSize: 18, fontWeight: 'normal' }} for="no">
+                {' '}
+                Xin lỗi, mình không thể tham dự
+              </label>
+            </div>
           </div>
         </div>
         <div className="row" css={styFlex}>
           <div className="col-md-3">
             <button onClick={submit} className="btn btn-default btn-block">
-              Lihat e-Ticket
+              Gửi
             </button>
           </div>
         </div>

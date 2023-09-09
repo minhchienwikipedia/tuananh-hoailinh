@@ -36,7 +36,7 @@ function Home({ location }) {
         <StorySection />
         <PhotoSection />
         <ConfirmationSection guestName={guestName} />
-        <WishesSection />
+        {/* <WishesSection /> */}
         <FooterSection />
       </Fragment>
     );
