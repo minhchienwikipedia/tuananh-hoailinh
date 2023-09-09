@@ -6,7 +6,7 @@
 
 module.exports = {
   /* Your site config here */
-  pathPrefix: '',
+  pathPrefix: '/tuananh-hoailinh',
   plugins: [
     `gatsby-plugin-react-helmet`,
     'gatsby-plugin-eslint',
