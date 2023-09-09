@@ -9,15 +9,11 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
-        with:
-          host: ${{ secrets.HOST }}
-          username: ${{ secrets.USERNAME }}
-          key: ${{ secrets.PRIVATE_KEY }}
-          port: 22
-          debug: true
-          script: |
-            export NODE_OPTIONS=--openssl-legacy-provider
+      - uses: actions/checkout@v3
+      - name: Run script file
+        run: |
+          export NODE_OPTIONS=--openssl-legacy-provider
+        shell: bash
       - uses: enriikke/gatsby-gh-pages-action@v2
         with:
           access-token: ${{ secrets.ACCESS_TOKEN }}
