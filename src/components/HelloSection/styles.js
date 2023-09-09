@@ -29,4 +29,8 @@ export const styWrapper = css`
       font-size: 14px;
     }
   }
+
+  img {
+    max-width: 120px;
+  }
 `;

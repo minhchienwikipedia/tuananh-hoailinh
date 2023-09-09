@@ -9,6 +9,10 @@ export const styWrapper = css`
   p {
     color: rgba(255, 255, 255, 0.8) !important;
   }
+
+  h2 {
+    font-size: 32px;
+  }
 `;
 
 export const styFlex = css`

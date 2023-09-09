@@ -39,7 +39,7 @@ export const wishlist = [
   },
   {
     name: 'Zakiy Anwar Fahri',
-    infoName: 'Sahabat Dinda & Indra',
+    infoName: 'Sahabat Tuấn Anh & Hoài Linh',
     description: `Hai Indra & Dinda, sebelum nya aku ucapin selamat akhirnya mencapai pernikahan. Semoga pernikahannya lancar dan menjadi keluarga sakinah mawahdah warahmah. Sebagai sahabat mu sejak awal kuliah kita berjuang bersama dan akhirnya sampai titik ini aku seneng banget kamu bisa menggapai cita-cita mu pelan-pelan, setelah ini kamu akan memulai perjalan dengan seorang yang akan lebih setia dari Sahabat yaitu Istri (Dinda), tetep sabar dan setia ya Ndra. Nahh, untuk Dinda bantu sahabat ku semakin baik ya hehe. :D`,
     image: Zakiy,
   },
@@ -128,7 +128,7 @@ export const wishlist = [
   {
     name: 'Puspita Dewi',
     infoName: 'Rekan Kerja Dinda, Ruangguru',
-    description: `"Dear Dinda & Indra,
+    description: `"Dear Tuấn Anh & Hoài Linh,
     Barakallahu lakuma wa jama’a baina kuma fii khair.
     Semoga pernikahan kalian bisa menjadi ladang ibadah dan pahala, dan menjadi pasangan sehidup sesurga. Sakinah, mawaddah wa rahmah selalu. Amiin"`,
     image: puspita,
@@ -142,7 +142,7 @@ export const wishlist = [
   {
     name: 'Emsho',
     infoName: 'Rekan Kerja Dinda, NET TV',
-    description: `Indra. Sebuwah nama yang sayup sering tak denger saat ciwi ciwi ex net jateng pada rerumpian godain Dinda, kalo pas break syuting Hikayat Insani, medio 2018 lalu. Ada yang cengin, dia nya tersipu malu.. Eh, alhamdulillaah cinta mereka akhirnya berlabuh hingga ke tahap ini. Selamat buat Dinda & Indra. Bahagia selamanya yaa.. `,
+    description: `Indra. Sebuwah nama yang sayup sering tak denger saat ciwi ciwi ex net jateng pada rerumpian godain Dinda, kalo pas break syuting Hikayat Insani, medio 2018 lalu. Ada yang cengin, dia nya tersipu malu.. Eh, alhamdulillaah cinta mereka akhirnya berlabuh hingga ke tahap ini. Selamat buat Tuấn Anh & Hoài Linh. Bahagia selamanya yaa.. `,
     image: emsho,
   },
   {

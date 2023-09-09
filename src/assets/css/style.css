@@ -49,7 +49,7 @@ body {
 }
 
 a {
-  color: #f14e95;
+  color: #9ec35a;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
@@ -57,7 +57,7 @@ a {
 a:hover,
 a:active,
 a:focus {
-  color: #f14e95;
+  color: #9ec35a;
   outline: none;
   text-decoration: none;
 }
@@ -81,17 +81,17 @@ figure {
 
 ::-webkit-selection {
   color: #fff;
-  background: #f14e95;
+  background: #9ec35a;
 }
 
 ::-moz-selection {
   color: #fff;
-  background: #f14e95;
+  background: #9ec35a;
 }
 
 ::selection {
   color: #fff;
-  background: #f14e95;
+  background: #9ec35a;
 }
 
 .fh5co-nav {
@@ -210,7 +210,7 @@ figure {
   color: #fff;
 }
 .fh5co-nav ul li.btn-cta a {
-  color: #f14e95;
+  color: #9ec35a;
 }
 .fh5co-nav ul li.btn-cta a span {
   background: #fff;
@@ -458,11 +458,13 @@ figure {
   display: flex !important;
   width: 100% !important;
   margin-bottom: 12px !important;
+  align-items: center;
 }
 
 .event-col > span {
   margin-left: 8px !important;
   text-align: left;
+  font-size: 18px;
 }
 
 #fh5co-counter {
@@ -788,7 +790,7 @@ figure {
   display: inline-block;
   zoom: 1;
   *display: inline;
-  color: #f14e95;
+  color: #9ec35a;
   padding-left: 10px;
   padding-right: 10px;
 }
@@ -807,7 +809,7 @@ figure {
   position: relative;
 }
 .fh5co-contact-info ul li:before {
-  color: #f14e95;
+  color: #9ec35a;
   position: absolute;
   left: 0;
   top: 0.05em;
@@ -900,7 +902,7 @@ form label {
 .fh5co-cover .display-tc .btn {
   padding: 15px 20px;
   background: #fff !important;
-  color: #f14e95;
+  color: #9ec35a;
   border: none !important;
   font-size: 14px;
   text-transform: uppercase;
@@ -1069,7 +1071,7 @@ form label {
   font-size: 20px;
   background: #fff;
   padding: 20px;
-  color: #f14e95;
+  color: #9ec35a;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
@@ -1092,7 +1094,7 @@ form label {
 }
 .couple-half h3 {
   font-family: 'Sacramento', Arial, serif;
-  color: #f14e95;
+  color: #9ec35a;
   font-size: 30px;
 }
 .couple-half .groom,
@@ -1190,7 +1192,7 @@ form label {
   height: 90px;
   font-size: 40px;
   line-height: 40px;
-  color: #f14e95;
+  color: #9ec35a;
 }
 .feature-center p,
 .feature-center h3 {
@@ -1213,7 +1215,7 @@ form label {
   margin-bottom: 10px;
   line-height: 1.5;
   font-weight: 500;
-  color: #f14e95;
+  color: #9ec35a;
   font-family: 'Sacramento', Arial, serif;
 }
 @media screen and (max-width: 768px) {
@@ -1248,7 +1250,7 @@ form label {
   display: block;
 }
 #fh5co-testimonial .wrap-testimony .testimony-slide span a.twitter {
-  color: #f14e95;
+  color: #9ec35a;
   font-weight: 300;
 }
 #fh5co-testimonial .wrap-testimony .testimony-slide figure {
@@ -1342,7 +1344,7 @@ form label {
   display: table-cell;
   vertical-align: middle;
   font-size: 30px;
-  color: #f14e95;
+  color: #9ec35a;
 }
 .feature-left .feature-copy {
   float: left;
@@ -1408,7 +1410,7 @@ form label {
 #fh5co-started .btn {
   height: 54px;
   border: none !important;
-  background: #f14e95;
+  background: #9ec35a;
   color: #fff;
   font-size: 16px;
   text-transform: uppercase;
@@ -1454,7 +1456,7 @@ form label {
 }
 .owl-carousel .owl-controls .owl-dot.active span {
   background: transparent;
-  border: 2px solid #f14e95;
+  border: 2px solid #9ec35a;
 }
 
 #fh5co-offcanvas {
@@ -1716,9 +1718,9 @@ form label {
 }
 
 .btn-primary {
-  background: #f14e95;
+  background: #9ec35a;
   color: #fff;
-  border: 2px solid #f14e95;
+  border: 2px solid #9ec35a;
 }
 .btn-primary:hover,
 .btn-primary:focus,
@@ -1728,13 +1730,13 @@ form label {
 }
 .btn-primary.btn-outline {
   background: transparent;
-  color: #f14e95;
-  border: 2px solid #f14e95;
+  color: #9ec35a;
+  border: 2px solid #9ec35a;
 }
 .btn-primary.btn-outline:hover,
 .btn-primary.btn-outline:focus,
 .btn-primary.btn-outline:active {
-  background: #f14e95;
+  background: #9ec35a;
   color: #fff;
 }
 
@@ -1883,7 +1885,7 @@ form label {
 .form-control:focus {
   outline: none;
   box-shadow: none;
-  border-color: #f14e95;
+  border-color: #9ec35a;
 }
 
 .row-pb-md {
@@ -1909,7 +1911,7 @@ form label {
 }
 
 .main-font {
-  font-family: 'Cookie', cursive !important;
+  font-family: 'Dancing Script', cursive !important;
 }
 
 .and-love {

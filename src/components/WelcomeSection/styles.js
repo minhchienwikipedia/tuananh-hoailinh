@@ -132,7 +132,7 @@ export const styBackground = css`
 
   @media screen and (max-width: 400px) {
     .title {
-      font-size: 40px;
+      font-size: 36px;
     }
 
     .sub-title {
@@ -142,7 +142,7 @@ export const styBackground = css`
 
   @media screen and (max-width: 500px) {
     .title {
-      font-size: 54px;
+      font-size: 40;
     }
 
     .sub-title {
@@ -162,7 +162,7 @@ export const styWrapper = css`
 
   h1 {
     margin-bottom: 0px;
-    font-size: 100px;
+    font-size: 80px;
     line-height: 1.5;
     font-family: 'Cookie', cursive;
     color: #fff;
@@ -205,7 +205,7 @@ export const styWrapper = css`
   }
 
   a {
-    color: #f14e95;
+    color: #9ec35a;
   }
 
   @media screen and (max-width: 330px) {
@@ -230,7 +230,7 @@ export const styWrapperCount = css`
   display: inline-block;
   width: 100px;
   height: 100px;
-  background: rgba(241, 78, 149, 0.8);
+  background: rgba(158, 195, 90, 0.8);
   margin: 8px;
   border-radius: 50%;
   position: relative;
@@ -279,7 +279,7 @@ export const styButtonWrapper = css`
   justify-content: center;
 
   .btn {
-    background: #f14e95;
+    background: #9ec35a;
     color: #fff;
     border: none;
   }
