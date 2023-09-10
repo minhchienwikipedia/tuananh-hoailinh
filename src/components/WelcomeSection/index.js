@@ -7,7 +7,6 @@ import ScrollToDown from './ScrollToDown';
 import { styWrapper, styHero, styBackground } from './styles';
 
 function WelcomeSection({ location, guestName, type, isAnonymGuest }) {
-  console.log(`[1;34m ~ file: index.js:10 ~ WelcomeSection ~ isAnonymGuest:`, isAnonymGuest);
   const handleScrollTo = () => {
     /** scroll into detail view */
     const element = document.getElementById('fh5co-couple');

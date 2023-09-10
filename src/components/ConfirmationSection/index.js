@@ -19,6 +19,9 @@ function ConfirmationSection({ guestName }) {
   }
 
   const submit = () => {
+    if (submitting) {
+      return;
+    }
     if (!selected) {
       alert('Bạn lựa chọn!');
       return;
@@ -86,7 +89,7 @@ function ConfirmationSection({ guestName }) {
         </div>
         <div className="row" css={styFlex}>
           <div className="col-md-3">
-            <button disabled={submitting} onClick={submit} className="btn btn-default btn-block">
+            <button onClick={submit} className="btn btn-default btn-block">
               Gửi
             </button>
           </div>
