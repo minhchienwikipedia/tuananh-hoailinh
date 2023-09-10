@@ -6,7 +6,7 @@ import Groom from '@assets/images/groom.jpg';
 
 import { styWrapper } from './styles';
 
-function HelloSection({ isInvitation }) {
+function HelloSection({}) {
   const finalSubtitle = 'Hanoi, 30.09.2023';
 
   return (

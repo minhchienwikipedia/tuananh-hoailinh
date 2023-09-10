@@ -1,34 +1,43 @@
 import React, { useState } from 'react';
 import { string, bool } from 'prop-types';
-import { Link } from 'gatsby';
 
 import { styWrapper, styFlex } from './styles';
 
 function ConfirmationSection({ guestName }) {
   const [selected, setSelected] = useState();
+  const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
   const [wishes, setWishes] = useState();
 
   const options = {
     YES: 'C%C3%B3',
     NO: 'Kh%C3%B4ng',
   };
+
+  if (!guestName || submitted) {
+    return null;
+  }
+
   const submit = () => {
     if (!selected) {
       alert('Bạn lựa chọn!');
       return;
     }
-    let url = `https://docs.google.com/forms/d/e/1FAIpQLSd4aqMx-oFgbYS52NxU6L5dV_0z0N-uCoSaIab3wcNH7PnAfg/formResponse?submit=Submit?usp=pp_url&entry.2092238618=${selected}&entry.1715010233=${guestName}`;
+    setSubmitting(true);
+    let url = `https://cors-proxy.fringe.zone/https://docs.google.com/forms/d/e/1FAIpQLSd4aqMx-oFgbYS52NxU6L5dV_0z0N-uCoSaIab3wcNH7PnAfg/formResponse?submit=Submit?usp=pp_url&entry.2092238618=${selected}&entry.1715010233=${guestName}`;
     if (wishes) {
       url += `&entry.1388511632=${wishes}`;
     }
-    fetch(url, { method: 'POST', redirect: 'follow' })
+    fetch(url, { method: 'POST', mode: 'cors' })
       .then((res) => {
         if (res.status === 200) {
           alert('Gửi thành công!');
         }
+        setSubmitting(false);
+        setSubmitted(true);
       })
       .catch((error) => {
-        console.log(`[1;34m ~ file: index.js:31 ~ submit ~ error:`, error);
+        setSubmitting(false);
         alert('Gửi thất bại');
       });
   };
@@ -77,7 +86,7 @@ function ConfirmationSection({ guestName }) {
         </div>
         <div className="row" css={styFlex}>
           <div className="col-md-3">
-            <button onClick={submit} className="btn btn-default btn-block">
+            <button disabled={submitting} onClick={submit} className="btn btn-default btn-block">
               Gửi
             </button>
           </div>

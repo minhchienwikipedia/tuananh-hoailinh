@@ -6,7 +6,8 @@ import CountContainer from './CountContainer';
 import ScrollToDown from './ScrollToDown';
 import { styWrapper, styHero, styBackground } from './styles';
 
-function WelcomeSection({ location, guestName, isInvitation, isAnonymGuest }) {
+function WelcomeSection({ location, guestName, type, isAnonymGuest }) {
+  console.log(`[1;34m ~ file: index.js:10 ~ WelcomeSection ~ isAnonymGuest:`, isAnonymGuest);
   const handleScrollTo = () => {
     /** scroll into detail view */
     const element = document.getElementById('fh5co-couple');
@@ -24,11 +25,11 @@ function WelcomeSection({ location, guestName, isInvitation, isAnonymGuest }) {
   };
 
   const renderGuestSection = () => {
-    if (isAnonymGuest) return <h2 className="to-dearest-name">Trân trọng kính mời</h2>;
+    if (isAnonymGuest) return null;
 
     return (
       <Fragment>
-        <h3 className="to-dearest">Trân trọng kính mời</h3>
+        <h3 className="to-dearest">Trân trọng kính mời {type}</h3>
         <h2 className="to-dearest-name">{guestName}</h2>
       </Fragment>
     );
