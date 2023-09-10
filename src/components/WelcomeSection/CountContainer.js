@@ -6,17 +6,16 @@ import { styMargin } from './styles';
 
 function CountContainer() {
   const { days, hours, minutes, seconds, timeHasRunOut, isEventOver } = useDateCountdown();
-  const finalText = isEventOver ? 'SUDAH' : 'SEDANG';
+  const finalText = isEventOver ? 'đã kết thúc' : 'đang diễn ra';
 
   if (timeHasRunOut)
     return (
       <>
         <div className="row">
           <div className="col-md-12" style={{ fontSize: '20px' }}>
-            {`ACARA ${finalText} BERLANGSUNG!`}
+            {`Sự kiện ${finalText}!`}
           </div>
         </div>
-        <ButtonLive />
       </>
     );
 

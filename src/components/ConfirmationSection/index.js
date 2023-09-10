@@ -17,11 +17,11 @@ function ConfirmationSection({ guestName }) {
       alert('Bạn lựa chọn!');
       return;
     }
-    let url = `https://docs.google.com/forms/d/e/1FAIpQLSd4aqMx-oFgbYS52NxU6L5dV_0z0N-uCoSaIab3wcNH7PnAfg/formResponse?&submit=Submit?usp=pp_url&entry.2092238618=${selected}&entry.1715010233=${guestName}`;
+    let url = `https://docs.google.com/forms/d/e/1FAIpQLSd4aqMx-oFgbYS52NxU6L5dV_0z0N-uCoSaIab3wcNH7PnAfg/formResponse?submit=Submit?usp=pp_url&entry.2092238618=${selected}&entry.1715010233=${guestName}`;
     if (wishes) {
       url += `&entry.1388511632=${wishes}`;
     }
-    fetch(url, { method: 'POST' })
+    fetch(url, { method: 'POST', redirect: 'follow' })
       .then((res) => {
         if (res.status === 200) {
           alert('Gửi thành công!');

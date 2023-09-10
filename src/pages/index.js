@@ -20,15 +20,7 @@ function Home({ location }) {
   const isInvitation = getQueryValue(location, 'type') === 'invitation';
   const isAnonymGuest = guestName === '' && !isInvitation;
 
-  const [showDetailContent, setShowDetailContent] = useState(false);
-
-  const handleClickDetail = () => {
-    setShowDetailContent(true);
-  };
-
   const renderDetailContent = () => {
-    if (!showDetailContent) return null;
-
     return (
       <Fragment>
         <HelloSection isInvitation={isInvitation} />
@@ -49,7 +41,6 @@ function Home({ location }) {
         isAnonymGuest={isAnonymGuest}
         isInvitation={isInvitation}
         location={location}
-        onClickDetail={handleClickDetail}
       />
       {renderDetailContent()}
       <FloatingMusic />
