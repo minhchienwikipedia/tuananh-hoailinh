@@ -20,7 +20,16 @@ function Home({ location }) {
   const type = decodeURIComponent(getQueryValue(location, 'type') || '');
   const isAnonymGuest = !guestName;
 
+  const [showDetailContent, setShowDetailContent] = useState(false);
+
+  const handleClickDetail = () => {
+    setShowDetailContent(true);
+  };
+
   const renderDetailContent = () => {
+    if (!showDetailContent) {
+      return null;
+    }
     return (
       <Fragment>
         <HelloSection type={type} />
@@ -36,7 +45,13 @@ function Home({ location }) {
 
   return (
     <MainLayout>
-      <WelcomeSection guestName={guestName} isAnonymGuest={isAnonymGuest} type={type} location={location} />
+      <WelcomeSection
+        guestName={guestName}
+        isAnonymGuest={isAnonymGuest}
+        type={type}
+        location={location}
+        onClickDetail={handleClickDetail}
+      />
       {renderDetailContent()}
       <FloatingMusic />
     </MainLayout>

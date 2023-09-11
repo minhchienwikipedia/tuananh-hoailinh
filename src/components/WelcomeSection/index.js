@@ -1,12 +1,17 @@
-import React, { Fragment } from 'react';
-import { object, string, bool } from 'prop-types';
+import React, { Fragment, useState } from 'react';
+import { object, string, bool, func } from 'prop-types';
 
 import WeddingImg from '@assets/images/wedding-logo.png';
 import CountContainer from './CountContainer';
 import ScrollToDown from './ScrollToDown';
 import { styWrapper, styHero, styBackground } from './styles';
 
-function WelcomeSection({ location, guestName, type, isAnonymGuest }) {
+const DELAY_TIME = 1500;
+
+function WelcomeSection({ location, guestName, type, isAnonymGuest, codeLink, onClickDetail }) {
+  const [loading, setLoading] = useState(false);
+  const [alreadyDownloadData, setAlreadyDownloadData] = useState(false);
+
   const handleScrollTo = () => {
     /** scroll into detail view */
     const element = document.getElementById('fh5co-couple');
@@ -14,17 +19,32 @@ function WelcomeSection({ location, guestName, type, isAnonymGuest }) {
   };
 
   const handleShowDetail = () => {
+    if (loading) return undefined;
+
     try {
       const myAudio = document.getElementById('myAudio');
       myAudio.play();
     } catch {
       console.error('FAILED_TO_PLAY_MUSIC');
     }
-    handleScrollTo();
+
+    onClickDetail();
+
+    if (!alreadyDownloadData) {
+      setLoading(true);
+
+      setTimeout(() => {
+        setLoading(false);
+        setAlreadyDownloadData(true);
+        handleScrollTo();
+      }, DELAY_TIME);
+    } else {
+      handleScrollTo();
+    }
   };
 
   const renderGuestSection = () => {
-    if (isAnonymGuest) return null;
+    if (isAnonymGuest) return <h2 className="to-dearest-name">Trân trọng kính mời</h2>;
 
     return (
       <Fragment>
@@ -57,7 +77,7 @@ function WelcomeSection({ location, guestName, type, isAnonymGuest }) {
             </div>
           </div>
           <div className="row">
-            <ScrollToDown onClick={handleShowDetail} />
+            <ScrollToDown loading={loading} onClick={handleShowDetail} />
           </div>
         </div>
       </header>
@@ -70,6 +90,12 @@ WelcomeSection.propTypes = {
   isInvitation: bool.isRequired,
   isAnonymGuest: bool.isRequired,
   location: object.isRequired,
+  codeLink: string,
+  onClickDetail: func.isRequired,
+};
+
+WelcomeSection.defaultProps = {
+  codeLink: '',
 };
 
 export default WelcomeSection;
