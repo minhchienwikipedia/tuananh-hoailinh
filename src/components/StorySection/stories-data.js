@@ -10,13 +10,13 @@ export const stories = [
     title: 'Chú rể ra đời',
     date: '17 Tháng 5, 1984',
     description:
-      'Pertama kali kami dipertemukan di sebuah acara malam keakraban di kampus Universitas Dian Nuswantoro. Sebagai seorang mahasiswa baru, kala itu Dinda melihat Indra sedang sibuk memegang megaphone (toa) di tengah hiruk pikuk acara. Belum ada sesuatu yang spesial, kala itu justru Dinda melihat Indra banyak menerima surat pink (tanda kagum) dari teman sesama mahasiswa barunya.',
+      'Chú rể nghĩ mãi nhưng không biết nói gì về sự kiện được sinh ra của mình, nhờ coder nhưng coder bảo chịu. Thế nên dùng tạm như này.',
     image: ImgStory1,
   },
   {
     title: 'Cô dâu ra đời',
     date: '4 Tháng 5, 1997',
-    description: 'Bùm, 13 năm sau cô dâu xuất hiện đem lại sự tươi trẻ cho cuộc đời chú rể.',
+    description: 'Bùm, 13 năm sau cô dâu xuất hiện.',
     image: ImgStory2,
   },
   {
@@ -37,11 +37,11 @@ export const stories = [
     title: 'Câu chuyện tình cảm 7 năm',
     date: 'Tháng 11, 2016',
     description:
-      'Không phải tình yêu sét đánh, cũng chẳng phải tán tỉnh dài lâu, tình cảm từ cả 2 phía dần xuất hiện với tần suất nhiều hơn, và mất khá lâu để cả 2 cùng thừa nhận điều đó. Trong gần 7 năm với biết bao thăng trầm, cả 2 nhận ra rằng đây đúng là duyên nợ và không thể rời xa. ',
+      'Không phải tình yêu sét đánh, cũng chẳng phải tán tỉnh dài lâu, tình cảm từ cả 2 phía dần xuất hiện với tần suất nhiều hơn, và mất khá lâu để cả 2 cùng thừa nhận điều đó. Trong gần 7 năm với biết bao thăng trầm, cả 2 nhận ra rằng đây chính là một nửa còn lại của cuộc đời mình. Xin quý zị đừng cười 🙂',
     image: ImgStory5,
   },
   {
-    title: 'Lời cầu hôn hốt hoảng và Lý do của buổi tiệc này',
+    title: 'Lời cầu hôn hốt hoảng!!',
     date: '24, Tháng 12, 2022',
     description:
       'Chỉ với 1 câu duy nhất: "Em đồng ý làm vợ anh nhé", Chú rể đã đưa câu chuyện tình cảm của cả 2 chính thức bước sang trang mới từ đây.',

@@ -1,5 +1,6 @@
 import { css, keyframes } from '@emotion/core';
 import Background from '@assets/images/bg-welcome.jpg';
+import BackgroundSmall from '@assets/images/bg-welcome-2.jpg';
 
 export const styHero = css`
   width: 100%;
@@ -131,6 +132,8 @@ export const styBackground = css`
   align-items: center;
 
   @media screen and (max-width: 400px) {
+    background-image: url(${BackgroundSmall});
+
     .title {
       font-size: 36px;
     }
@@ -141,6 +144,8 @@ export const styBackground = css`
   }
 
   @media screen and (max-width: 500px) {
+    background-image: url(${BackgroundSmall});
+
     .title {
       font-size: 40;
     }

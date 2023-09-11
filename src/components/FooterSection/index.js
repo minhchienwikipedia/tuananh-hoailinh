@@ -15,7 +15,7 @@ function FooterSection({}) {
       <div id="fh5co-couple" className="fh5co-section-gray" css={styWrapper}>
         <div className="container">
           <div className="col-md-8 col-md-offset-2 text-center fh5co-heading">
-            <h2 className="main-font">Gửi lời chúc đến chúng tớ</h2>
+            <h2 className="main-font">Gửi lời chúc đến chúng mình</h2>
           </div>
           <div className="row">
             <div onClick={onCopy('8888338833')} style={{ cursor: 'pointer' }} className="col-md-6  text-center">
