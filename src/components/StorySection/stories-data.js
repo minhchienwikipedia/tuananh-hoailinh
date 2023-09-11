@@ -9,8 +9,7 @@ export const stories = [
   {
     title: 'Chú rể ra đời',
     date: '17 Tháng 5, 1984',
-    description:
-      'Chú rể nghĩ mãi nhưng không biết nói gì về sự kiện được sinh ra của mình, nhờ coder nhưng coder bảo chịu. Thế nên dùng tạm như này.',
+    description: 'Rạng sáng ngày 17/5 1 cậu bé với đôi mắt đen láy mang đôi chân phiêu du ra đời.',
     image: ImgStory1,
   },
   {
