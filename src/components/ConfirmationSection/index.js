@@ -90,7 +90,7 @@ function ConfirmationSection({ guestName }) {
         <div className="row" css={styFlex}>
           <div className="col-md-3">
             <button onClick={submit} className="btn btn-default btn-block">
-              Gửi
+              {submitting ? 'Đang gửi...' : 'Gửi'}
             </button>
           </div>
         </div>
